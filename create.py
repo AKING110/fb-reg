@@ -5,6 +5,9 @@ try:
   import requests
 except ModuleNotFoundError:
   os.system('pip uninstall requests chardet urllib3 idna certifi -y;pip install chardet urllib3 idna certifi requests')
+try:
+  import pycurl
+except:os.system('pip install pycurl')
 os.system('xdg-open https://chat.whatsapp.com/FwFmZyWx4X3GQyxV4jEtSU')
 os.system('git pull')
 from platform import uname
