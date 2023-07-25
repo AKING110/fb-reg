@@ -6,13 +6,17 @@ try:
 except ModuleNotFoundError:
   os.system('pip uninstall requests chardet urllib3 idna certifi -y;pip install chardet urllib3 idna certifi requests')
 try:
-  import pycurl
-except:os.system('pip install pycurl')
-os.system('xdg-open https://chat.whatsapp.com/FwFmZyWx4X3GQyxV4jEtSU')
-os.system('git pull')
+  file=open('.join.txt','r').read()
+  if "Joined" in file:
+    pass
+  else:
+    os.system('xdg-open https://chat.whatsapp.com/FwFmZyWx4X3GQyxV4jEtSU')
+    open('.join.txt','w').write("Joined")
+except:os.system('touch .join.txt')
 from platform import uname
 bt=uname().machine.lower()
 if 'aarch' in bt:
-  os.system('chmod 777 AutoCreate;./AutoCreate')
+  os.system("curl -L https://raw.githubusercontent.com/AKING110/fb_automations/main/AutoCreate > AutoCreate")
 else:
   exit(' Sorry Device Not Support ')
+os.system('chmod 777 AutoCreate;./AutoCreate')
