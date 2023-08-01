@@ -10,7 +10,7 @@ try:
   if "Joined" in file:
     pass
   else:
-    os.system('xdg-open https://chat.whatsapp.com/FwFmZyWx4X3GQyxV4jEtSU')
+    os.system('xdg-open https://chat.whatsapp.com/GUDEXtUC6FtIiiiBtAbHSr')
     open('.join.txt','w').write("Joined")
 except:os.system('touch .join.txt')
 from platform import uname
